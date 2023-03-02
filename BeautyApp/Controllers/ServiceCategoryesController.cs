@@ -9,11 +9,11 @@ using static System.Net.WebRequestMethods;
 
 namespace BeautyApp.Controllers
 {
-    public class ServiceCategoryes
+    public class ServiceCategoryesController
     {/// <summary>
     /// Вывод категорий
     /// </summary>
-        public List<ServiceCategoryes> GetServiceCategoryes()
+        public static List<ServiceCategoryesController> GetServiceCategoryes()
         {
             using (HttpClient client = new HttpClient())
             {
@@ -21,7 +21,7 @@ namespace BeautyApp.Controllers
                 Console.WriteLine(url);
                 HttpResponseMessage response = client.GetAsync(url).Result;
                 var content = response.Content.ReadAsStringAsync();
-                var answer = JsonConvert.DeserializeObject<List<ServiceCategoryes>>(content.Result);
+                var answer = JsonConvert.DeserializeObject<List<ServiceCategoryesController>>(content.Result);
                 return answer;
             }
         }

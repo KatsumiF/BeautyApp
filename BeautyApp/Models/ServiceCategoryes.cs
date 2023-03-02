@@ -9,12 +9,11 @@ namespace BeautyApp.Models
     public class ServiceCategoryes
     {
 
-        public class Rootobject
-        {
-            public int CategoryId { get; set; }
-            public string CategoryTitle { get; set; }
-            public byte[] CategoryImage { get; set; }
-        }
+
+        public int CategoryId { get; set; }
+        public string CategoryTitle { get; set; }
+        public byte[] CategoryImage { get; set; }
+        
 
     }
 }

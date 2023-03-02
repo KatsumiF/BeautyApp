@@ -60,7 +60,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controllers\Manager.cs" />
-    <Compile Include="Controllers\ServiceCategoryes.cs" />
+    <Compile Include="Controllers\ServiceCategoryesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Models\ServiceCategoryes.cs" />
     <Compile Include="Models\Services.cs" />
