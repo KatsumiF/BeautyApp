@@ -38,7 +38,7 @@ namespace BeautyApp.Views.Pages
           Users result=UsersController.GetUser(LoginTextBox.Text, PasswordPasswordBox.Password);
             if (result != null)
             {
-                App.CurrentUser = result;
+                App.CurrentUser = result;//сохранение информации о пользователе
                 this.NavigationService.Navigate(new MainPage());
                 }
                 else

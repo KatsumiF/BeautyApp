@@ -59,10 +59,17 @@ namespace BeautyApp
             MainFrame.Navigate(new AuthPage());
             LogInTextBlock.Visibility = Visibility.Collapsed;
         }
-
+        /// <summary>
+        /// Изменение интерфейса при загрузке страницы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainFrameNavigated(object sender, NavigationEventArgs e)
         {
-
+            if (App.CurrentUser!=null)
+            {
+                PersonTextBlock.Text = $"Пользователь: { App.CurrentUser.UserLogin}";//отображение логина пользователя после авторизации
+            }
         }
     }
 }
