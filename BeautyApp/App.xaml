@@ -1,0 +1,15 @@
+﻿<Application x:Class="BeautyApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BeautyApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--с 8ой страницы презентации для стилей-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/Dictionaries/DictionaryMain.xaml"/>
+                <!--<ResourceDictionary Source="/Assets/Dictionaries/'Указываем словари'.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
