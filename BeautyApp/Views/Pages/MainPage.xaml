@@ -9,6 +9,26 @@
       Title="Салон красоты ''">
 
     <Grid>
-        
+        <ListView x:Name="CategoriesListView"
+                  VerticalAlignment="Center" >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding CategoryImage}" Height="200"/>
+                        <TextBlock   Text="{Binding CategoryTitle}"  />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!--Вывод блоков в ряд-->
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel ></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
     </Grid>
 </Page>
