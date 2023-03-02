@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeautyApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,7 @@ namespace BeautyApp
     /// </summary>
     public partial class App : Application
     {
+        public static Users CurrentUser { get; set; } = null; //созд. переменной для сохранения пользователя
+
     }
 }

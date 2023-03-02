@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeautyApp.Controllers;
+using BeautyApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,21 +26,45 @@ namespace BeautyApp.Views.Pages
         {
             InitializeComponent();
             LoginTextBox.Focus();
+            RegTextBlock.Focusable = true;//либо указываем в две строки, либо первая строка и в гл. окне Focusable="True"
         }
 
+        /// <summary>
+        /// Авторизация
+        /// </summary>
         private void SignInButtonClick(object sender, RoutedEventArgs e)
         {
-
+            // MessageBox.Show("Переход в авторизацию");//вывод сообщения при нажатии
+          Users result=UsersController.GetUser(LoginTextBox.Text, PasswordPasswordBox.Password);
+            if (result != null)
+            {
+                App.CurrentUser = result;
+                this.NavigationService.Navigate(new MainPage());
+                }
+                else
+                {
+                MessageBox.Show("Пользователь отсутствует");
+            }
+            
         }
-
+        /// <summary>
+        /// Переход на регистрацию
+        /// </summary>
         private void RegTextBlockMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            MessageBox.Show("Переход на регистрацию");//вывод сообщения при нажатии
         }
 
+
+        /// <summary>
+        /// Обработка события нажатия на клавиатуру
+        /// </summary>
         private void RegTextBlockKeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.Key == Key.Enter) //при нажатии на кнопку Enter выполняется условие RegTextBlockMouseLeftButtonDown
+            {
+                RegTextBlockMouseLeftButtonDown(RegTextBlock, null);
+            }
         }
     }
 }

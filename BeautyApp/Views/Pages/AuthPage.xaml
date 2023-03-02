@@ -18,11 +18,13 @@
                 <TextBlock Text="Пароль"/>
                 <PasswordBox x:Name="PasswordPasswordBox" PasswordChar="." />
             </UniformGrid>
+            <!--Focusable="True"-->
             <Button Content="Sign In" x:Name="SignInButton"
-                    Focusable="True"
+                   
                     Click="SignInButtonClick"/>
             <TextBlock Text="Зарегистрироваться" x:Name="RegTextBlock"
 MouseLeftButtonDown="RegTextBlockMouseLeftButtonDown"
+                       
 HorizontalAlignment="Right"
                        KeyDown="RegTextBlockKeyDown"/>
             
