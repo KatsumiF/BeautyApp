@@ -3,12 +3,15 @@
     <FontFamily x:Key="CaptionFont"> <!--С 9 стр. презентации-->
         pack://application:,,,/Assets/Fonts/SFMono-Bold.ttf#SF Mono
     </FontFamily> <!--Для внедрения своего стиля-->
+    
+    
     <!--Цветовые характеристики ниже-->
     <SolidColorBrush Color="#F29B99" x:Key="MainColor"/>
     <!--MainColor это имя-->
     <SolidColorBrush Color="#D9D2D0" x:Key="SecondColor"/>
     <SolidColorBrush Color="Azure" x:Key="ActiveColor"/>
     <SolidColorBrush Color="DarkSlateGray" x:Key="TextColor"/>
+    
 <!--Добавляются стили текста:-->
     <Style TargetType="Grid" >
         <Setter Property="Background" Value="{StaticResource MainColor}"/>
@@ -24,5 +27,18 @@
         <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="FontFamily" Value="{StaticResource CaptionFont}"/>
+    </Style><!--Стиль окна авторизации-->    <Style TargetType="UniformGrid">
+        <Setter Property="Margin" Value="0 5"/>
+    </Style>
+    <Style TargetType="TextBox" >
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+    <Style TargetType="PasswordBox" >
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+    <Style TargetType="Button" >
+        <Setter Property="Background" Value="{StaticResource SecondColor}"/>
+        <Setter Property="Padding" Value="5 5 5 5"/>
+        <Setter Property="Margin" Value="0 5 0 5"/>
     </Style>
 </ResourceDictionary>

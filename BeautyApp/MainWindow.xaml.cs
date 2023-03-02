@@ -50,5 +50,19 @@ namespace BeautyApp
                 }
             };
         }
+
+        /// <summary>
+        /// кнопка для перехода на авторизацию
+        /// </summary>
+        private void LogInTextBlockMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Navigate(new AuthPage());
+            LogInTextBlock.Visibility = Visibility.Collapsed;
+        }
+
+        private void MainFrameNavigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

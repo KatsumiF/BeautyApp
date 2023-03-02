@@ -1,0 +1,32 @@
+﻿<Page x:Class="BeautyApp.Views.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BeautyApp.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Авторизация">
+
+    <Grid>
+        <StackPanel Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <UniformGrid Columns="2">
+                <TextBlock Text="Логин" VerticalAlignment="Center"/>
+                <TextBox x:Name="LoginTextBox" Padding="5" VerticalContentAlignment="Center"/>
+            </UniformGrid>
+            <UniformGrid Columns="2">
+                <TextBlock Text="Пароль"/>
+                <PasswordBox x:Name="PasswordPasswordBox" PasswordChar="." />
+            </UniformGrid>
+            <Button Content="Sign In" x:Name="SignInButton"
+                    Focusable="True"
+                    Click="SignInButtonClick"/>
+            <TextBlock Text="Зарегистрироваться" x:Name="RegTextBlock"
+MouseLeftButtonDown="RegTextBlockMouseLeftButtonDown"
+HorizontalAlignment="Right"
+                       KeyDown="RegTextBlockKeyDown"/>
+            
+        </StackPanel>
+
+    </Grid>
+</Page>
